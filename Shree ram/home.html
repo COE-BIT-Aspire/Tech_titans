@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Hygeia:Home</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="headhos">
+      <div class="logo">
+          <div ><img class="imglogo" src="pngegg.png"></div>
+          <div ><p class="hos-name" >Hygeia<hr width="100%" size="1" style="margin-top: 4px;" ><p style="margin-top: -5px; margin-left: 13px;"><i>The hospital that cares.</i></p></p></div>
+
+      </div>
+      <div class="login-upper"><img class="imgprofile" src="pngwing.com.png"><br>JustinS</div>
+  </div>
+  <div style="display: flex; justify-content: space-between;background-color: whitesmoke; ">
+   <div>
+      <div class="devdetails">
+          <div class="detail"><u>Patient Details:</u>
+                <div class="infos">
+                   <p>Name: Justin S</p> 
+                   <p>Age: 40</p>
+                   <p>Caretaker: Julia</p>
+                   <p>Mobile No: 9748023261</p></div>
+          </div>
+          <div class="detail">
+             <div class="infos">
+                <p style="margin-top: 45px;">Gender: Male</p> 
+                <p>Blood Group: <i>O+Ve</i></p>
+          </div>   
+          </div>
+      </div>
+    </div>
+    <div class="history"><b style="font-size: larger; font-style: normal;">History</b>
+      <ul>
+    <li> 09/6/2023 - Diagnosis</li>
+    <li> 30/8/2023 - Diagnosis</li>
+    <li> 19/11/2023 - Diagnosis</li>
+    <li> 27/2/2024 - Diagnosis</li>
+   
+   </ul>
+   
+   </div>
+   </div>
+   <h2 style="margin-top: 40px;">Schedule Appointment</h>
+     <div class="schedule">
+      <div style=" height:240px">
+      <form  action="/submit-form" method="post">
+         <label class= "label" for="name">Name:</label>
+         <input class="box" id="name"  type="text" placeholder="Justin S"required>
+         <label class= "label"for="Mobileno">Mobile No:</label>
+         <input class="box" id="mobileno"  type="text" placeholder="*required"required>
+         <label class= "label"for="Mail">Email:</label>
+         <input class="box" id="mail"  type="text" placeholder="someone@example.com" ><br>
+         
+      </form>
+      </div>
+      <div style=" height:240px">
+         <form  action="/submit-form" method="post">
+            <label class= "label" for="date">Select your Preferred Date:</label>
+            <input class="box" type="date"  name="date" required>
+            <label class= "label" for="time">Preferred Timing:</label>
+            <select  class="box"id="country" placeholder="time">
+               <option >Select Timing</option>
+               <option >9:00-12:00</option>
+               <option >12:00-18:00</option>
+               <option >18:00-21:00</option><br>
+             </select>
+            <label class= "label"for="doc">Select doctor:</label>
+            <select  class="box"id="doc" >
+               <option >-None-</option>
+               <option >Dr.Ericsson David</option>
+               <option >Dr.velonia</option>
+               <option >Dr.Alfres Hitcher</option><br>
+             </select>
+             <label class= "label"for="loc">Select Location:</label>
+             <select  class="box"id="loc" >
+               <option >-None-</option>
+               <option >Coimbatore</option>
+               <option >Chennai</option>
+               <option >Thenkasi</option>
+               <option >Madurai</option><br>
+             </select>
+            
+         </form>
+      </div>
+     </div>
+
+
+
+     <div class="schedule" style="margin-top: 0px; padding-top: 0px;">
+      <div style="height:240px">
+  
+         <label for="about u">Discription</label>
+  <textarea id="about u" placeholder="*Discribe about your problem"></textarea><br>
+  <p style="margin-bottom: 8px;">Caretaker Needed?</p>
+  <input type="radio" />
+  <label  style="display: inline;"for="parttime">Yes</label> 
+  <input type="radio" />
+  <label style="display: inline; padding: 3px;" for="parttime">NO</label> 
+      
+      </div>
+      <div style="  height:240px">
+       <p style="font-family: 'Times New Roman', Times, serif; font-size: 20px;">Scheduled Time Will Sent To Mobile Number And Email Address. If Any Queries Call our Helpline number 4100-32-4200 </p>
+       <button class="butt"title="good" onclick="alert('Submitted Sucessfully') ;reloadPage()">SUBMIT</button>
+      </div>
+     </div>
+
+     <div class="functional">
+      <button class="funbut">Video Counseling</button>
+      <button class="funbut" >Buy Medicine</button>
+      <button class="funbut" >Generate Bill</button>
+     </div>
+     <div class="bottom">
+      <h2 style="margin-bottom: 5px;margin-top: 3px;">Hygeia Hospital</h2>
+      <h5 style="margin-top: 9px; margin-bottom: 0px;">Saravanapatti, Coimbatore<br>Egmore, Chennai<br>Tenkasi<br>Madurai</h5>
+      <h6 style="margin-top: 3px;">Mobile: 41203 41203</h6>
+     </div>
+  
+ 
+  
+     <script>
+      function reloadPage() {
+          location.reload();
+      }
+      </script>
+   
+</body>
+</html>
