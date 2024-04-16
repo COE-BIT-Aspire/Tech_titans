@@ -1,0 +1,81 @@
+:root {
+    --yellow: #96f924;;
+}
+
+* {
+    font-family: 'Nunito Sans', sans-serif;
+    color: rgb(249, 247, 247);
+    transition: all .2s linear;
+}
+h1{
+    text-align: center;
+    color: var(--yellow);
+    text-transform: capitalize;
+}
+
+html::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #010c0f;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--yellow);
+}
+
+body {
+    background: #323131;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 20px;
+}
+
+*::selection {
+    background: var(--yellow);
+    color: #0a0909;
+}
+
+a{
+    color: aqua;
+}
+
+.line1 {
+    display: flex;
+}
+.line1 .line3{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+button {
+    background: var(--yellow);
+    color: #0a0909;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 5rem;
+}
+
+.cake {
+    border-bottom: 0.25rem solid var(--yellow);
+}
+
+.box1 {
+    display: flex;
+    padding-left: 1rem;
+    border-left: 0.25rem solid var(--yellow);
+    border-right: 0.25rem solid var(--yellow);
+    border-bottom: 0.25rem solid var(--yellow);
+}
+
+.box1 .box2 .hi{
+    padding-left: 2.5rem; 
+}
+
+.box1 .box3 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
