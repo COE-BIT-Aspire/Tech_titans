@@ -1,0 +1,10 @@
+const employee = {
+    name: "Priya",
+    id: 101,
+}
+
+function printName(){
+    console.log(employee.name);
+}
+
+printName()
