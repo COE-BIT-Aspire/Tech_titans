@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hotel Center </title>
+    <link rel="icon" href="images/fav.jpg" type="image/x-icon" sizes="20x20">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/swiper1.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    
+    <section class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <span><i class="fas fa-hotel"></i></span><span>Hotel Center</span>
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li>
+                            <a onclick="toggleNavbar()" href="#banner">Home</a>
+                        </li>
+                        <li>
+                            <a onclick="toggleNavbar()" href="#aboutUs">About</a>
+                        </li>
+                        <li>
+                            <a onclick="toggleNavbar()" href="#room">Room</a>
+                        </li>
+                        <li>
+                            <a onclick="toggleNavbar()" href="#services">Services</a>
+                        </li>
+                        <li class="link-info">
+                            <button class="parent-btn about-btn" <a onclick="toggleNavbar()" href="#booking"></a>
+                                <span class="btn-text">Book Now</span>
+                                <span class="btn-layout"></span>
+                            </button>
+                        </li>
+                        <li class="link-info">
+                            <button class="parent-btn about-btn" onclick="openModal()">
+                                <span class="btn-text">Login</span>
+                                <span class="btn-layout"></span>
+                            </button>
+                        </li>                        
+                    </ul>
+                    <div id="loginModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <h1>Create a New Account</h1>
+                            <form action="next.html" target="_blank">
+                                <label for="fname">First Name:</label>
+                                <input type="text" id="fname" name="fname" required>
+                    
+                                <label for="lname">Last Name:</label>
+                                <input type="text" id="lname" name="lname" required>
+                    
+                                <label for="pwd">Password:</label>
+                                <input type="password" id="pwd" name="pwd" required>
+                    
+                                <label style="display:inline;">Gender:</label> &nbsp;
+                                <input type="radio" id="male" name="gdr" value="male">
+                                <label for="male" style="display: inline;">Male</label> &emsp;
+                                <input type="radio" id="female" name="gdr" value="female">
+                                <label for="female" style="display: inline;">Female</label>
+                                <br><br>
+                                
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <script>
+                        function openModal() {
+                            document.getElementById("loginModal").style.display = "flex";
+                        }
+                        function closeModal() {
+                            document.getElementById("loginModal").style.display = "none";
+                        }
+                        window.onclick = function (event) {
+                            const modal = document.getElementById("loginModal");
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        };
+                    </script>
+                </div>
+                <i onclick="toggleNavbar()" class="fa fa-bars Menu-hamburger"></i>
+                </div>
+        </div>
+    </section>
+                        
+    <section class="banner" id="banner">
+        <swiper-container class="mySwiper" navigation="true" pagination="false" pagination-clickable="true">
+            <swiper-slide>
+            <div class="banner-img">
+                <img src="images/room-5.jpg" alt="n">
+                <div class="banner-title">
+                    <h1>Explore the World: Start Your Journey with Us!</h1>
+                    
+                </div>
+            </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="banner-img">
+                    <img src="images/room-6.jpg" alt="n">
+                    <div class="banner-title">
+                        <h1>Travel Smarter: Book the Best Deals on Stays!</h1>
+                    </div>
+                </div>
+            </swiper-slide>
+            <
+            <swiper-slide>
+                <div class="banner-img">
+                    <img src="images/room-3.jpg" alt="n">
+                    <div class="banner-title">
+                        <h1>Unforgettable Stays Await: Find Your Next Adventure!</h1>
+                    </div>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+    </section>
+    <section class="aboutUs" id="aboutUs">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="images/about.jpg" alt="k">
+                </div>
+                <div class="about-info">
+                    <h1>About US</h1>
+                    <p>At Hotel center, we believe in creating memorable experiences for every guest who walks through our doors. Nestled in
+                    the heart of Chennai, our hotel offers a perfect blend of modern luxury and warm hospitality. From elegantly
+                    designed rooms to top-notch amenities, we strive to provide a comfortable and indulgent stay for our guests. Whether
+                    you're here for business or leisure, our attentive staff is committed to exceeding your expectations and making your
+                    stay truly special.</p>
+                    <p>Our prime location puts you within easy reach of the city's most exciting attractions, dining hotspots, and shopping
+                    districts. After a day of exploring, unwind in our serene spa or enjoy a gourmet meal at our on-site restaurant. At
+                    Hotel center, we go above and beyond to ensure your stay is exceptional. Discover why our guests return time and time
+                    again for an unforgettable experience. Book your stay with us today and let us be your home away from home.</p>
+                    <button class="parent-btn about-btn">
+                        <span class="btn-text">Learn More</span>
+                        <span class="btn-layout"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="room" id="room">
+        <div class="container">
+            <h1 class="room-header">OUR ROOM</h1>
+            <div class=" mySwiper" pagination="true" pagination-clickable="true" space-between="30"
+                slides-per-view="3">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="room-content">
+                            <div class="room-img">
+                                <img src="images/room-6.jpg" alt="k">
+                                <div class="price">299.99/egp</div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Single Room</h2>
+                                <p>A room designed for one person, usually with a single bed.</p>
+                                <div class="rom-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <button class="parent-btn room-btn">
+                                    <span class="btn-text">Book Now</span>
+                                    <span class="btn-layout"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="room-content">
+                            <div class="room-img">
+                                <img src="images/room-5.jpg" alt="k">
+                                <div class="price">399.99/egp</div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Double Room</h2>
+                                <p>A room designed for two people, typically with one queen-sized or king-sized bed.</p>
+                                <div class="rom-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <button class="parent-btn room-btn">
+                                    <span class="btn-text">Book Now</span>
+                                    <span class="btn-layout"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="room-content">
+                            <div class="room-img">
+                                <img src="images/room-6.jpg" alt="k">
+                                <div class="price">399.99/egp</div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Twin Room</h2>
+                                <p>A room that can accommodate three people, often with three single beds.</p>
+                                <div class="rom-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <button class="parent-btn room-btn">
+                                    <span class="btn-text">Book Now</span>
+                                    <span class="btn-layout"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="room-content">
+                            <div class="room-img">
+                                <img src="images/room-5.jpg" alt="k">
+                                <div class="price">399.99/egp</div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Family Room</h2>
+                                <p>A room designed to accommodate families, often with additional beds or bunk beds for children.</p>
+                                <div class="rom-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <button class="parent-btn room-btn">
+                                    <span class="btn-text">Book Now</span>
+                                    <span class="btn-layout"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="room-content">
+                            <div class="room-img">
+                                <img src="images/room-6.jpg" alt="k">
+                                <div class="price">399.99/egp</div>
+                            </div>
+                            <div class="room-info">
+                                <h2>Suite</h2>
+                                <p>A larger, more luxurious room that includes a separate living area and bedroom.</p>
+                                <div class="rom-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <button class="parent-btn room-btn">
+                                    <span class="btn-text">Book Now</span>
+                                    <span class="btn-layout"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h1 class="gallery-title">OUR GALLERY</h1>
+            <div class=" mySwiper1" pagination-clickable="true" slides-per-view="3.8"
+                space-between="14">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="images/room-6.jpg" alt="k">
+                            <div class="icon">
+                                <i class="fas fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="images/room-5.jpg" alt="k" >
+                            <div class="icon">
+                                <i class="fas fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="images/room-4.jpg" alt="k">
+                            <div class="icon">
+                                <i class="fas fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="images/room-3.jpg" alt="k">
+                            <div class="icon">
+                                <i class="fas fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="images/room-2.jpg"alt="k" >
+                            <div class="icon">
+                                <i class="fas fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="images/room-1.jpg" alt="k">
+                            <div class="icon">
+                                <i class="fas fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="banner-img">
+                            <img src="images/room-6.jpg" alt="k">
+                            <div class="icon">
+                                <i class="fas fa-magnifying-glass-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="form-data">
+        <div class="container" id="form-data">
+            <form class="form-content">
+                <div class="data check-in">
+                    <label for="dates">Check-in date:</label>
+                    <input type="date" id="dates" name="dates">
+                </div>
+                <div class="data check-out">
+                    <label for="date">Check-out date:</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="data adults">
+                    <label>Adults *</label>
+                    <select title="Select number of adults">
+                        <option>1 Adults</option>
+                        <option>2 Adults</option>
+                        <option>3 Adults</option>
+                        <option>4 Adults</option>
+                        <option>5 Adults</option>
+                        <option>6 Adults</option>
+                    </select>
+                </div>
+                <div class="data children">
+                    <label>Children *</label>
+                    <select title="Select number of children">
+                        <option>1 Child</option>
+                        <option>2 Child</option>
+                        <option>3 Child</option>
+                        <option>4 Child</option>
+                        <option>5 Child</option>
+                        <option>6 Child</option>
+                    </select>
+                </div>
+                <div class="data">
+                    <label>Rooms *</label>
+                    <select title="Select number of rooms">
+                        <option>1 Rooms</option>
+                        <option>2 Rooms</option>
+                        <option>3 Rooms</option>
+                        <option>4 Rooms</option>
+                        <option>5 Rooms</option>
+                        <option>6 Rooms</option>
+                    </select>
+                </div>
+                <button class="parent-btn check-btn" id="kik" type="button">
+                    <span class="btn-text">Check Availability</span>
+                    <span class="btn-layout"></span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+        <!-- <section class="services" id="services">
+                <div class="container">
+                    <h1>OUR SERVICES</h1>
+                    <div class="services-content">
+                        <div class="service">
+                            <div class="services-img">
+                                <img src="images/service1.png " alt="fr">
+                            </div>
+                            <h3>Swimming Pool</h3>
+                        </div>
+                        <div class="service">
+                            <div class="services-img">
+                                <img src="images/service2.png" alt="k">
+                            </div>
+                            <h3>Swimming Pool</h3>
+                        </div>
+                        <div class="service">
+                            <div class="services-img">
+                                <img src="images/service3.png" alt="k">
+                            </div>
+                            <h3>Swimming Pool</h3>
+                        </div>
+                        <div class="service">
+                            <div class="services-img">
+                                <img src="images/service4.png" alt="k">
+                            </div>
+                            <h3>Swimming Pool</h3>
+                        </div>
+                        <div class="service">
+                            <div class="services-img">
+                                <img src="images/service5.png" alt="k" >
+                            </div>
+                            <h3>Swimming Pool</h3>
+                        </div>
+                        <div class="service">
+                            <div class="services-img">
+                                <img src="images/service6.png" alt="k">
+                            </div>
+                            <h3>Swimming Pool</h3>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+    <section class="book-now" id="booking">
+        <div class="container" id="book-now">
+            <form class="book-now-form">
+                <div class="data">
+                    <label>Name </label>
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="data">
+                    <label>Email </label>
+                    <input type="email" placeholder="Your email">
+                </div>
+                <div class="data">
+                    
+                    <label for="check-in">Check In </label>
+                    <input type="date" id="check-in" placeholder="Select check-in date">
+                    
+                </div>
+                <div class="data">
+                    <label for="check-out">Check Out </label>
+                    <input type="date" id="check-out" placeholder="Select check-out date">
+                </div>
+                <div class="data">
+                    <label>Adults </label>
+                    <select title="ll">
+                        <option>1 Adults</option>
+                        <option>2 Adults</option>
+                        <option>3 Adults</option>
+                        <option>4 Adults</option>
+                        <option>5 Adults</option>
+                        <option>6 Adults</option>
+                    </select>
+                </div>
+                <div class="data">
+                    <label>Children </label>
+                    <select title="ll">
+                        <option>1 Child</option>
+                        <option>2 Child</option>
+                        <option>3 Child</option>
+                        <option>4 Child</option>
+                        <option>5 Child</option>
+                        <option>6 Child</option>
+                    </select>
+                </div>
+                <div class="data">
+                    <label>Rooms </label>
+                    <select title="ll">
+                        <option>1 Rooms</option>
+                        <option>2 Rooms</option>
+                        <option>3 Rooms</option>
+                        <option>4 Rooms</option>
+                        <option>5 Rooms</option>
+                        <option>6 Rooms</option>
+                    </select>
+                </div>
+                <div class="data">
+                    <label>Room Type </label>
+                    <select title="ll">
+                        <option>Single Room</option>
+                        <option>Double Rooms</option>
+                        <option>Twin Rooms</option>
+                        <option>Family Rooms</option>
+                        <option>Suite</option>
+                    </select>
+                </div>
+                <button class="parent-btn check-btn">
+                    <span class="btn-text">BOOK NOW</span>
+                    <span class="btn-layout"></span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-link">
+                    <h2>Contact Info</h2>
+                    <ul>
+                        
+                        <li><a>
+                                <i class="fas fa-phone"></i><span>+91-9157949107</span>
+                            </a></li>
+                        <li><a>
+                                <i class="fas fa-envelope"></i><span> hotelcenter@gmail.com
+                                </span>
+                            </a></li>
+                        <li><a>
+                                <i class="fas fa-map"></i><span> Sholinganallur, Chennai - Tamil Nadu</span>
+                            </a></li>
+                    </ul>
+                </div>
+
+            <div class="credit">
+                <h3> <span> </span></h3>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>   
+    <script src="js/swiper1.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
