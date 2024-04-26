@@ -8,7 +8,7 @@ function createPerson(firstName, lastName) {
     } 
 } 
 let name = createPerson('This is a', 'named function!'); 
-  
+
 console.log(name.getFullName()); 
 
 
