@@ -11,8 +11,10 @@
 
 body ,html{
     background: #e7efe8;
+    position: relative;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    height: 100%;
     overflow-x: hidden;
     scroll-padding-top: 12vh;
 }
