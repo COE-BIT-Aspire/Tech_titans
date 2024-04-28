@@ -1,4 +1,4 @@
-function createPerson(firstName, lastName) { 
+function createAccount(firstName, lastName) { 
     return { 
         firstName: firstName, 
         lastName: lastName, 
@@ -7,18 +7,18 @@ function createPerson(firstName, lastName) {
         } 
     } 
 } 
-let name = createPerson('This is a', 'named function!'); 
+let name = createAccount('Sujeeth', 'Kandasamy!'); 
 
 console.log(name.getFullName()); 
 
 
 
 ()=> { 
-    console.log("hey");
+    console.log("Created Successfully!!");
 } 
 
 var wel = function () { 
-    return "Good morning";
+    return "Welcome";
 }
 var myname="Sujeeth";
 
@@ -28,10 +28,6 @@ function display(myname, wel){
 display(myname,wel);
 
 
-(function IIFE(){
-    console.log("IIFE SUCCESS");
-}
-)
 
 function myFirst() {
     let value = 1;
@@ -50,21 +46,21 @@ function empName()
 console.log(empName);//whole function is printed
 
 console.log(__filename)
-console.log(__dirname)
+console.log(__dirname);
 
-var x = 9;
-function getName() {
-    console.log("I am Sujeeth");
+var roomNumber=200;
+function Status() {
+    console.log("Room booked successfully!!");
 }
-getName();
-console.log(x);//I am Sujeeth 9
+Status();
+console.log("Your room number is "+roomNumber);//I am Sujeeth 9
 
 //If we write print stmt above declaration
-getName();
-console.log(x);// I am Sujeeth undefined
-var x = 9;
-function getName() {
-    console.log("I am Sujeeth");
+Status();
+console.log("Your room number is "+roomNumber);
+var roomNumber = 200;
+function Status() {
+console.log("Your room number is "+roomNumber);//I am Sujeeth 9
 }// this is called as hoisting
 
 
@@ -78,7 +74,7 @@ function empId()
 }
 
 
-console.log(a);// not defined error
-let a = 10;
-console.log(ab);// undefined
-var ab = 20;
+console.log(amount);// not defined error
+let amount = 10;
+console.log(totalDays);// undefined
+var totalDays = 20;
