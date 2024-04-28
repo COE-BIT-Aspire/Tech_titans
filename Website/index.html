@@ -35,14 +35,14 @@
                             <a onclick="toggleNavbar()" href="#services">Services</a>
                         </li>
                         <li class="link-info">
-                            <button class="parent-btn about-btn" <a onclick="toggleNavbar()" href="#booking"></a>
+                            <button class="parent-btn about-btn" onclick="scrollToBookNow()">
                                 <span class="btn-text">Book Now</span>
                                 <span class="btn-layout"></span>
                             </button>
                         </li>
-                        <li class="link-info">
+                        <li class="link-info" id="signupBtn">
                             <button class="parent-btn about-btn" onclick="openModal()">
-                                <span class="btn-text">Login</span>
+                                <span class="btn-text">SignUp</span>
                                 <span class="btn-layout"></span>
                             </button>
                         </li>                        
@@ -51,7 +51,7 @@
                         <div class="modal-content">
                             <span class="close" onclick="closeModal()">&times;</span>
                             <h1>Create a New Account</h1>
-                            <form action="next.html" target="_blank">
+                            <form id="signupForm" onsubmit="submitForm(event)">
                                 <label for="fname">Name:</label>
                                 <input type="text" id="fname" name="fname" required>
                     
@@ -64,14 +64,14 @@
                                 <label for="pwd">Mobile number:</label>
                                 <input type="number" id="num" name="num" required>
                     
-                                <label style="display:inline;">Gender:</label> &nbsp;
+                                <!-- <label style="display:inline;">Gender:</label> &nbsp;
                                 <input type="radio" id="male" name="gdr" value="male">
                                 <label for="male" style="display: inline;">Male</label> &emsp;
                                 <input type="radio" id="female" name="gdr" value="female">
                                 <label for="female" style="display: inline;">Female</label>
-                                <br><br>
+                                <br><br> -->
                                 
-                                <button type="submit">Submit</button>
+                                <button type="submit">Create Account</button>
                             </form>
                         </div>
                     </div>
@@ -88,6 +88,19 @@
                                 modal.style.display = "none";
                             }
                         };
+                        function submitForm(event) {
+                                event.preventDefault(); 
+
+                                closeModal();
+
+                                var signupBtn = document.getElementById("signupBtn");
+                                signupBtn.innerHTML = '<i class="fas fa-user-circle fa-3x" style="color:red;"></i>';
+                        }
+
+                        function scrollToBookNow() {
+                            var bookNowSection = document.getElementById("booking");
+                            bookNowSection.scrollIntoView({ behavior: 'smooth' });
+                        }
                     </script>
                 </div>
                 <i onclick="toggleNavbar()" class="fa fa-bars Menu-hamburger"></i>
@@ -374,50 +387,7 @@
         </div>
     </section>
 
-        <!-- <section class="services" id="services">
-                <div class="container">
-                    <h1>OUR SERVICES</h1>
-                    <div class="services-content">
-                        <div class="service">
-                            <div class="services-img">
-                                <img src="images/service1.png " alt="fr">
-                            </div>
-                            <h3>Swimming Pool</h3>
-                        </div>
-                        <div class="service">
-                            <div class="services-img">
-                                <img src="images/service2.png" alt="k">
-                            </div>
-                            <h3>Swimming Pool</h3>
-                        </div>
-                        <div class="service">
-                            <div class="services-img">
-                                <img src="images/service3.png" alt="k">
-                            </div>
-                            <h3>Swimming Pool</h3>
-                        </div>
-                        <div class="service">
-                            <div class="services-img">
-                                <img src="images/service4.png" alt="k">
-                            </div>
-                            <h3>Swimming Pool</h3>
-                        </div>
-                        <div class="service">
-                            <div class="services-img">
-                                <img src="images/service5.png" alt="k" >
-                            </div>
-                            <h3>Swimming Pool</h3>
-                        </div>
-                        <div class="service">
-                            <div class="services-img">
-                                <img src="images/service6.png" alt="k">
-                            </div>
-                            <h3>Swimming Pool</h3>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
+        
     <section class="book-now" id="booking">
         <div class="container" id="book-now">
             <form class="book-now-form">
@@ -432,12 +402,12 @@
                 <div class="data">
                     
                     <label for="check-in">Check In </label>
-                    <input type="date" id="check-in" placeholder="Select check-in date">
+                    <input type="date" id="check-in">
                     
                 </div>
                 <div class="data">
                     <label for="check-out">Check Out </label>
-                    <input type="date" id="check-out" placeholder="Select check-out date">
+                    <input type="date" id="check-out">
                 </div>
                 <div class="data">
                     <label>Adults </label>

@@ -74,11 +74,7 @@ img{
    left: 0;
 }
 
-/*
-==============
-navbar
-==============
-*/
+
 .navbar{
     height: 72px;
     position: fixed;
@@ -177,37 +173,31 @@ navbar
     display: none;
     font-size: 32px;
 }
-/* Style the modal */
+
 #loginModal {
     display: none;
-    /* Initially hidden */
     position: fixed;
     z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
-    /* Full screen */
     height: 100%;
-    /* Full screen */
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Background color with opacity */
     justify-content: center;
     align-items: center;
-    /* Centers modal content */
 }
 
-/* Modal content styling */
+
 .modal-content {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     width: 400px;
     max-width: 90%;
-    /* Ensure it fits on mobile devices */
 }
 
-/* Close button styling */
+
 .close {
     color: #aaa;
     float: right;
@@ -221,7 +211,7 @@ navbar
     text-decoration: none;
 }
 
-/* Styling for modal input fields */
+
 .modal-content input[type="text"],
 .modal-content input[type="password"],
 .modal-content input[type="email"] ,
@@ -231,7 +221,6 @@ navbar
     border-radius: 4px;
     border: 1px solid #ccc;
     width: 90%;
-    /* Full width of modal content */
 }
 
 .modal-content input[type="radio"] {
@@ -239,18 +228,18 @@ navbar
     margin-right: 5px;
 }
 
-/* Style for form labels */
+
 .modal-content label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
 
-/* Style for submit button */
+
 .modal-content button[type="submit"] {
-    width: 20%;
+    width: 30%;
     padding: 10px;
-    margin-left: 150px;
+    margin-left: 130px;
     border: none;
     background-color: var(--red);
     color: #fff;
@@ -258,57 +247,14 @@ navbar
     cursor: pointer;
 }
 
-/* Submit button hover effect */
+
 .modal-content button[type="submit"]:hover {
     background-color: #000000;
     color:#f9f7f7;
 }
-@media(max-width:1040px){
-    .nav-content .Menu-hamburger,
-    .navbar .nav-logo{
-        line-height: 12vh;
-    }
-    .nav-content .Menu-hamburger{
-        display: block;
-    }
-    .nav-content .nav-link{
-        position: absolute;
-        left: -100%;
-        top: 12vh;
-        width: 100%;
-        height: 100vh;
-        background: #00000075;
-        transition: all .4s ease-in-out;
-        line-height: normal;
-     }
-     .nav-content .nav-link ul{
-        flex-direction: column;
-        height: 84vh;
-        justify-content: space-around;
-   }
-   .nav-content .nav-link ul li a{
-    color: #ffffff;
-   }
-   .nav-content .nav-link ul .link-info{
-    background: none;
-    padding:0px;
-    margin: 0px;
-    border-radius: 0px;
-   }
-   .nav-content .nav-link.mobile-menu{
-    left: 0px;
-    transition: all .4s ease-in-out;
-    }
-    .nav-content .Menu-hamburger.Cred{
-        color: #ff0000;
-    }
-}
 
-/*
-==============
-banner
-==============
-*/
+
+
 .banner{
     padding-top: 2rem;
     padding-left: 2rem;
@@ -333,17 +279,10 @@ banner
     color: #ffffff;
     margin-bottom: 10px;
 }
-@media(max-width:520px){
-    .banner .banner-img .banner-title{
-        width: 70%;
-    }
-}
 
-/*
-==============
-form-data
-==============
-*/
+
+
+
 .form-data{
     margin: 80px 0px;
 }
@@ -385,38 +324,8 @@ form-data
     background: var(--red);
     color: #ffffff;
 }
-@media(max-width:1100px){
-    .form-data .form-content .data,
-    .form-data .form-content .check-btn{
-       flex-basis: 32%;
-     }
-     .form-data .form-content .check-btn{
-        margin-top: 6%;
-     }
-}
-@media(max-width:1000px){
-    .form-data .form-content .data,
-    .form-data .form-content .check-btn{
-       flex-basis: 48%;
-     }
-     .form-data .form-content .check-btn{
-        margin-top: 8%;
-     }
-}
-@media(max-width:800px){
-    .form-data .form-content .data,
-    .form-data .form-content .check-btn{
-       flex-basis: 100%;
-     }
-     .form-data .form-content .check-btn{
-        margin-top: 14px;
-     }
-}
-/*
-==============
-   AboutUs
-==============
-*/
+
+
 .aboutUs{
     margin: 23px 0px 50px;
 }
@@ -454,45 +363,9 @@ form-data
     font-size: 17px;
 }
 
-@media(max-width:1100px){
-    .aboutUs .about-content .about-img{
-        flex-basis: 44%;
-    }
-    .aboutUs .about-content .about-info{
-        flex-basis: 52%;
-    }
-}
 
-@media(max-width:1000px){
-    .aboutUs .about-content .about-img{
-        flex-basis: 48%;
-    }
-    .aboutUs .about-content .about-info{
-        flex-basis: 49%;
-    }
-.aboutUs .about-content .about-info h1{
-    margin-bottom: 20px;
-    font-size: 34px;
-}
-.aboutUs .about-content .about-info p{
-    margin: 14px 0px;
-    line-height: 22px;
-} 
-.aboutUs .about-content .about-info .about-btn{
-    margin:10px 0px;
-}
-}
-@media(max-width:900px){
-    .aboutUs .about-content{
-        flex-direction: column;
-    }       
-}
 
-/*
-==============
-   room
-==============
-*/
+
 .room{
     padding: 24px 0px 34px;
     position: relative;
@@ -563,66 +436,6 @@ form-data
 }
 
 
-/*
-==============
-   services
-==============
-*/
-.services{
-    margin: 100px 0px 80px;
-}
-.services h1{
-    color: var(--red);
-    font-size: 40px;
-    text-align: center;
-}
-.services .services-content{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--red);
-}
-.services .services-content .service{
-    flex-basis: 15%;
-    margin-top: 14px;
-}
-.services .services-content .service .services-img{
-    width: 66%;
-    margin: auto;
-}
-.services .services-content .service h3{
-    width: fit-content;
-    margin: auto;
-}
-@media(max-width:1200px){
-    .services .services-content .service{
-        flex-basis: 19%;
-    }   
-    .services .services-content{
-        flex-wrap: wrap;
-    }  
-}
-@media(max-width:920px){
-    .services .services-content .service{
-        flex-basis: 24%;
-    }     
-}
-
-@media(max-width:700px){
-    .services .services-content .service{
-        flex-basis: 32%;
-    }     
-}
-@media(max-width:520px){
-    .services .services-content .service{
-        flex-basis: 48%;
-    }     
-}
-/*
-==============
-    GALLERY
-==============
-*/
 .gallery .gallery-title{
     color: var(--red);
     font-size: 40px;
@@ -659,11 +472,8 @@ form-data
     left: 50%;
     transform: translate(-50%,-50%);
 }
-/*
-======================
-        book-now
-======================
-*/
+
+
 
 .book-now{
     margin: 80px 0px;
@@ -738,21 +548,11 @@ form-data
 }
 .book-now .book-now-form .data select option:checked {
     background-color: var(--red);
-    /* Change background color of the selected option to red */
     color: white;
-    /* Change text color to white */
 }
 
-@media(max-width:880px){
-    .book-now .book-now-form .data{
-        flex-basis: 100%;
-    }
-} 
-/*
-======================
-       footer
-======================
-*/
+
+
 .footer{
     margin: 28px 0px;
     background: #474444;
@@ -787,6 +587,145 @@ form-data
     color: #ffffff;
    font-size: 16px;
 }
+
+
+
+
+
+
+@media(max-width:1040px) {
+
+    .nav-content .Menu-hamburger,
+    .navbar .nav-logo {
+        line-height: 12vh;
+    }
+
+    .nav-content .Menu-hamburger {
+        display: block;
+    }
+
+    .nav-content .nav-link {
+        position: absolute;
+        left: -100%;
+        top: 12vh;
+        width: 100%;
+        height: 100vh;
+        background: #00000075;
+        transition: all .4s ease-in-out;
+        line-height: normal;
+    }
+
+    .nav-content .nav-link ul {
+        flex-direction: column;
+        height: 84vh;
+        justify-content: space-around;
+    }
+
+    .nav-content .nav-link ul li a {
+        color: #ffffff;
+    }
+
+    .nav-content .nav-link ul .link-info {
+        background: none;
+        padding: 0px;
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    .nav-content .nav-link.mobile-menu {
+        left: 0px;
+        transition: all .4s ease-in-out;
+    }
+
+    .nav-content .Menu-hamburger.Cred {
+        color: #ff0000;
+    }
+}
+@media(max-width:520px) {
+    .banner .banner-img .banner-title {
+        width: 70%;
+    }
+}
+
+@media(max-width:1100px) {
+
+    .form-data .form-content .data,
+    .form-data .form-content .check-btn {
+        flex-basis: 32%;
+    }
+
+    .form-data .form-content .check-btn {
+        margin-top: 6%;
+    }
+}
+
+@media(max-width:1000px) {
+
+    .form-data .form-content .data,
+    .form-data .form-content .check-btn {
+        flex-basis: 48%;
+    }
+
+    .form-data .form-content .check-btn {
+        margin-top: 8%;
+    }
+}
+
+@media(max-width:800px) {
+
+    .form-data .form-content .data,
+    .form-data .form-content .check-btn {
+        flex-basis: 100%;
+    }
+
+    .form-data .form-content .check-btn {
+        margin-top: 14px;
+    }
+}
+@media(max-width:1100px) {
+    .aboutUs .about-content .about-img {
+        flex-basis: 44%;
+    }
+
+    .aboutUs .about-content .about-info {
+        flex-basis: 52%;
+    }
+}
+
+@media(max-width:1000px) {
+    .aboutUs .about-content .about-img {
+        flex-basis: 48%;
+    }
+
+    .aboutUs .about-content .about-info {
+        flex-basis: 49%;
+    }
+
+    .aboutUs .about-content .about-info h1 {
+        margin-bottom: 20px;
+        font-size: 34px;
+    }
+
+    .aboutUs .about-content .about-info p {
+        margin: 14px 0px;
+        line-height: 22px;
+    }
+
+    .aboutUs .about-content .about-info .about-btn {
+        margin: 10px 0px;
+    }
+}
+@media(max-width:900px) {
+    .aboutUs .about-content {
+        flex-direction: column;
+    }
+}
+@media(max-width:880px) {
+    .book-now .book-now-form .data {
+        flex-basis: 100%;
+    }
+}
+
 @media(max-width:1000px){
     .footer .footer-content .footer-link ul li i,
     .footer .footer-content .footer-link ul li span{
@@ -803,41 +742,6 @@ form-data
         flex-basis:100% ;
     }
 }
-/*
-social-media
-*/
-.footer .social-media{
-    margin: 12px 0px;
-    text-align: center;
-    border-bottom: 1px solid #0077b6;
-    padding: 4px 0px 24px;
-}
-.footer .social-media a{
-    font-size: 20px;
-    border: 1px solid #0077b6;
-     border-radius: 50%;
-     color: #0077b6;
-     width: 46px;
-     height: 46px;
-     line-height: 46px;
-     margin-right: 6px;
-     transition: all .5s ease-in-out;
-}
-.footer .social-media a:hover{
-    transform: rotate(360deg);
-    background: #0077b6;
-    color: #ffffff;
-}
-.footer .credit{
-  color: #ffffff;
-  text-align: center;
-  font-size: 17px;
-  padding: 6px 0px;
-}
-.footer .credit span{
-    color: #feffff;
-}
-
 
 
 
