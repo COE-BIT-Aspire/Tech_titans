@@ -18,8 +18,7 @@ app.post('/submit', (req, res) => {
         password,
         mobile,
         email
-    }
-    
+    } 
 axios.post("http://localhost:3000/users",userdata).then(data=>{
     res.send("user data saved success")
 }).catch(err=>console.log("error saving the data",err))
