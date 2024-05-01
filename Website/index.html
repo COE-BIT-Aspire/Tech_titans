@@ -8,6 +8,7 @@
     <title> Hotel Center </title>
     <link rel="icon" href="images/fav.jpg" type="image/x-icon" sizes="20x20">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="css/swiper1.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -59,49 +60,19 @@
                                 <input type="email" id="lname" name="lname" required>
                     
                                 <label for="pwd">Password:</label>
-                                <input type="password" id="pwd" name="pwd" required>
+                                <input type="password" id="password" name="password" required>
+                                <i class="bi bi-eye-slash" id="togglePassword"></i>
+
 
                                 <label for="pwd">Mobile number:</label>
-                                <input type="number" id="num" name="num" required>
-                    
-                                <!-- <label style="display:inline;">Gender:</label> &nbsp;
-                                <input type="radio" id="male" name="gdr" value="male">
-                                <label for="male" style="display: inline;">Male</label> &emsp;
-                                <input type="radio" id="female" name="gdr" value="female">
-                                <label for="female" style="display: inline;">Female</label>
-                                <br><br> -->
+                                <input type="text" id="num" name="num" required pattern="[7-9][0-9]{9}" maxlength="10">
+                                <span id="mobileError" style="color: red; display: none; font-size: smaller;">Mobile number should be 10 digits starting with 7, 8, or 9.</span>
+
                                 
-                                <button type="submit">Create Account</button>
+                                <button type="submit" id="bookNowBtn">Create Account</button>
                             </form>
                         </div>
                     </div>
-                    <script>
-                        function openModal() {
-                            document.getElementById("loginModal").style.display = "flex";
-                        }
-                        function closeModal() {
-                            document.getElementById("loginModal").style.display = "none";
-                        }
-                        window.onclick = function (event) {
-                            const modal = document.getElementById("loginModal");
-                            if (event.target == modal) {
-                                modal.style.display = "none";
-                            }
-                        };
-                        function submitForm(event) {
-                                event.preventDefault(); 
-
-                                closeModal();
-
-                                var signupBtn = document.getElementById("signupBtn");
-                                signupBtn.innerHTML = '<i class="fas fa-user-circle fa-3x" style="color:red;"></i>';
-                        }
-
-                        function scrollToBookNow() {
-                            var bookNowSection = document.getElementById("booking");
-                            bookNowSection.scrollIntoView({ behavior: 'smooth' });
-                        }
-                    </script>
                 </div>
                 <i onclick="toggleNavbar()" class="fa fa-bars Menu-hamburger"></i>
                 </div>
@@ -155,7 +126,7 @@
                     districts. After a day of exploring, unwind in our serene spa or enjoy a gourmet meal at our on-site restaurant. At
                     Hotel center, we go above and beyond to ensure your stay is exceptional. Discover why our guests return time and time
                     again for an unforgettable experience. Book your stay with us today and let us be your home away from home.</p>
-                    <button class="parent-btn about-btn">
+                    <button class="parent-btn about-btn" onclick="openTripAdvisor()">
                         <span class="btn-text">Learn More</span>
                         <span class="btn-layout"></span>
                     </button>
@@ -165,7 +136,7 @@
     </section>
     <section class="room" id="room">
         <div class="container">
-            <h1 class="room-header">OUR ROOM</h1>
+            <h1 class="room-header">OUR ROOMS</h1>
             <div class=" mySwiper" pagination="true" pagination-clickable="true" space-between="30"
                 slides-per-view="3">
                 <div class="swiper-wrapper">
@@ -390,30 +361,30 @@
         
     <section class="book-now" id="booking">
         <div class="container" id="book-now">
-            <form class="book-now-form">
+            <form class="book-now-form" >
                 <div class="data">
                     <label>Name </label>
-                    <input type="text" placeholder="Your name">
+                    <input type="text" name=" Your Name" placeholder="Your name" required>
                 </div>
                 <div class="data">
                     <label>Email </label>
-                    <input type="email" placeholder="Your email">
+                    <input type="email" name="Your Email" placeholder="Your email" required>
                 </div>
                 <div class="data">
                     
                     <label for="check-in">Check In </label>
-                    <input type="date" id="check-in">
+                    <input type="date" id="check-in" name="Check_in date" required>
                     
                 </div>
                 <div class="data">
                     <label for="check-out">Check Out </label>
-                    <input type="date" id="check-out">
+                    <input type="date" id="check-out" name="Check_out date" required>
                 </div>
                 <div class="data">
                     <label>Adults </label>
-                    <select title="ll">
+                    <select title="ll" name="Total adults" required>
                         <option disabled selected value="">Select number of adults</option>
-                        <option>1 Adults</option>
+                        <option>1 Adult</option>
                         <option>2 Adults</option>
                         <option>3 Adults</option>
                         <option>4 Adults</option>
@@ -423,21 +394,21 @@
                 </div>
                 <div class="data">
                     <label>Children </label>
-                    <select title="ll">
+                    <select title="ll" name="Total children" required>
                         <option disabled selected value="">Select number of children</option>
                         <option>1 Child</option>
-                        <option>2 Child</option>
-                        <option>3 Child</option>
-                        <option>4 Child</option>
-                        <option>5 Child</option>
-                        <option>6 Child</option>
+                        <option>2 Children</option>
+                        <option>3 Children</option>
+                        <option>4 Children</option>
+                        <option>5 Children</option>
+                        <option>6 Children</option>
                     </select>
                 </div>
                 <div class="data">
                     <label>Rooms </label>
-                    <select title="ll">
+                    <select title="ll" name="Total rooms" required>
                         <option disabled selected value="">Select total rooms</option>
-                        <option>1 Rooms</option>
+                        <option>1 Room</option>
                         <option>2 Rooms</option>
                         <option>3 Rooms</option>
                         <option>4 Rooms</option>
@@ -447,23 +418,30 @@
                 </div>
                 <div class="data">
                     <label>Room Type </label>
-                    <select title="ll">
-                        <option disabled selected value="">Select the typeof rooms</option>
+                    <select title="ll" name="Type of room" required>
+                        <option disabled selected value="">Select the type of rooms</option>
                         <option>Single Room</option>
-                        <option>Double Rooms</option>
-                        <option>Twin Rooms</option>
-                        <option>Family Rooms</option>
+                        <option>Double Room</option>
+                        <option>Twin Room</option>
+                        <option>Family Room</option>
                         <option>Suite</option>
                     </select>
                 </div>
                 <button class="parent-btn check-btn" id="bookNowBtn">
                     <span class="btn-text">BOOK NOW</span>
                     <span class="btn-layout"></span>
-                </button>
-            </form>
+                </button>   
+            </form>    
         </div>
-        
     </section>
+
+    <div id="bookingDetails" class="app">
+        <div class="modal-app">
+            <span class="discard" onclick="closeBookingDetails()">&times;</span>
+            <h1>Booking Details</h1>
+            <div id="details"></div>
+        </div>
+    </div>
 
     <section class="footer">
         <div class="container">
@@ -489,34 +467,10 @@
                 <h3> <span> </span></h3>
             </div>
         </div>
-    </section>
-    <script>
-        const bookNowBtn = document.getElementById('bookNowBtn');
-        bookNowBtn.addEventListener('click', () => {
-            const name = document.querySelector('.book-now-form input[type="text"]').value;
-            const email = document.querySelector('.book-now-form input[type="email"]').value;
-            const checkIn = document.querySelector('.book-now-form input#check-in').value;
-            const checkOut = document.querySelector('.book-now-form input#check-out').value;
-            const adults = document.querySelector('.book-now-form select:nth-of-type(1)').value;
-            const children = document.querySelector('.book-now-form select:nth-of-type(2)').value;
-            const rooms = document.querySelector('.book-now-form select:nth-of-type(3)').value;
-            const roomType = document.querySelector('.book-now-form select:nth-of-type(4)').value;
-
-            const formData = `
-                        Name: ${name}
-                        Email: ${email}
-                        Check-in Date: ${checkIn}
-                        Check-out Date: ${checkOut}
-                        Adults: ${adults}
-                        Children: ${children}
-                        Rooms: ${rooms}
-                        Room Type: ${roomType}
-                        `;
-
-            prompt('Form Data:', formData);
-        });
-    </script>
-    <script src="script.js"></script>   
+     </section>
+    
+    <script src="js/display.js"></script>
+    <script src="js/script.js"></script>   
     <script src="js/swiper1.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/jquery.js"></script>
