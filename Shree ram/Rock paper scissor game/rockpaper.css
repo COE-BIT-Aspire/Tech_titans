@@ -1,0 +1,35 @@
+
+body{
+   background-color: rgb(19, 12, 12);
+   color: rgb(255, 255, 255);
+   font-family: Arial;
+}
+.ti{
+font-size: 30px;
+font-weight: bold;
+}
+
+.img{
+height: 50px;
+}
+.movebutton{
+background-color: black;
+border: 2px solid white;
+border-radius: 50px;
+width: 100px;
+height: 100px;
+margin: 4px;
+cursor: pointer;
+}
+.resu{
+font-size: 30px;
+margin-left: 20px;
+}
+.rese,.autoplaybutton{
+background-color: white;
+border: none;
+padding: 8px 15px;
+font-size: 10x;
+cursor: pointer;
+}
+
