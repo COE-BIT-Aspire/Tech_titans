@@ -1,0 +1,9 @@
+<img class="thumb" src="thumb/hq720.webp">
+            <p class="vtitle">Oppenheimer | First Look </p>
+            <p class="vauthor">Universal Pictures</p>
+            <p class="vstat">34M views &#183; 4 days ago</p>
+
+
+
+            display:grid;
+                grid-template-columns: 50px 1fr;

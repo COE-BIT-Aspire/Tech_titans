@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        .er
+ {color: #222222;} 
+ .success
+ {color: rgba(0,0,0,0.9);}
+ #Evil{color: blueviolet;}
+
+ .you{background-color: orange;}
+ .me{background-color: green;}
+ .fontstyle {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style:italic;
+    font-weight: bold;
+   text-decoration: underline;
+   font-size: 50px;;
+
+ }
+
+ h2{
+    background-color: green; 
+    text-align: center;
+    line-height: 50px;
+    word-spacing: 20px;
+    letter-spacing: 4px ;
+
+ }
+ ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+ }
+ .css-box-model{
+    border: 1px solid green;
+    height: 100px;
+    width: 100px;
+    padding-left: 20px;
+    margin: 10px;}
+#spc{color:violet}
+    .Specificity{
+        color:green;
+    }
+h3{
+        color:blue !important;
+
+    }
+h3{color:red;}
+
+.inh{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bolder;
+}
+
+th,td{
+    border-bottom:2px solid #000000;
+    padding: 15px;
+}
+
+table{
+    border-collapse: collapse;
+    width:  60%;
+
+    
+}
+
+td{
+    text-align: center;
+    height:50px;
+vertical-align: bottom;
+}
+.ni{
+    border:1px solid red;
+    display: inline;
+}
+.ni2{
+    border:1px solid green;
+    display: none;
+} 
+
+
+ 
+.position1{ 
+    border: 1px solid green;
+    position:static;
+}
+.position2{
+    border: 1px solid blue;
+position:relative;
+bottom:50px;
+left:100px;
+}
+.position3{
+    border: 1px solid purple;
+    position:fixed;
+    top:50px;
+    right:50px;
+
+}
+.position4{
+    border: 1px solid red;
+    position:absolute;
+    bottom: 150px;
+    left: 200px;
+
+}
+.container{
+    position:relative;
+    width:400px;
+    height:300px;
+    border:2px solid green;
+}
+.position5{
+    border: 1px solid violet;
+    position:sticky;
+    top: 20px;
+    left:30px;
+
+}
+.emcontainer{
+    font-size: 20px;
+    height: 2em;
+    background-color: #333;
+    line-height: 3rem;
+}
+.em{font-size: 3em;
+border: 2px solid green;
+width:calc(50vw - 100px) ;
+height:min(50vh,600px)}
+
+
+
+    </style>
+</head>
+<body>
+    <h1 >Css Crash Course</h1>
+    <h1>Seriously</h1>
+
+    <h2>what?</h2>
+    <h2>Are you ok?</h2>
+<h1 >Seriously</h1>
+<h1 class="fontstyle">Yes Seriously</h1>
+
+    <p>This is a Paragraph</p>
+    <p>This is second Paragraph </p>
+    <p id="Evil">This is third Paragraph</p>
+    <p id="Good">This is fourth Paragraph</p>
+    <p class="er">This is fourth Paragraph</p>
+    <p class="success">This is fifth Paragraph</p>
+
+<div class="you">Yes me</div>
+<span class="me">not me</span>
+<ul>
+    <li>milk</li>
+    <li>tea</li>
+    <li>coffee</li>
+
+</ul>
+<div class="css-box-model">Css box model</div>
+
+<h3 class="Specificity" id="spc" style="color: purple;">Cascade</h3>
+
+<div class="inh">
+    <p>Inheritance</p>
+</div>
+<div class="position5">
+    position types 5
+
+ </div>
+<table>
+    <thead>
+        <tr>
+            <th>Head 1</th>
+            <th>Head 2</th>
+            <th>Head 3</th>
+            
+        </tr>
+    </thead>
+<tbody>
+    <tr>
+           
+        <td>data 1</td>
+        <td>data 2</td>
+        <td>data 3</td>
+
+    </tr>
+    <tr>
+           
+        <td>data 4</td>
+        <td>data 5</td>
+        <td>data 6</td>
+
+    </tr>
+    <tr>
+           
+        <td>data 7</td>
+        <td>data 8</td>
+        <td>data 9</td>
+
+    </tr>
+    <tr>
+           
+        <td>data 10</td>
+        <td>data 11</td>
+        <td>data 12</td>
+
+    </tr>
+</table><br><br>
+
+    <div class="ni">NISchal</div>
+    <span class="ni2">NISchal2</span>
+<br><br>
+
+ <div class="position1">
+    position types 1
+
+ </div>
+ <div class="position2">
+    position types 2
+
+ </div><div class="position3">
+    position types 3
+
+ </div><div class="container">
+    <div class="position4">
+    position types 4
+</div>
+ </div>
+<br><br>
+
+<div class="emcontainer">em container
+<div class="em"> em child element</div>
+</div>
+</tbody>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+.subs   {
+  background-color: rgb(200, 0, 0);
+  color:aliceblue; 
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right:8px;
+  transition: opacity 0.15s;
+  padding-top:  9px;
+  padding-bottom:  9px;
+  padding-right: 16px;
+  padding-left: 16px;
+  vertical-align: top;
+  display:block;
+}
+.subs:hover{opacity:0.8;}
+.subs:active{opacity:0.5;}
+
+.join  {
+  background-color: rgb(255, 255, 255);
+  border-color : rgb(7, 156, 180);
+  border-style: solid;
+  color:rgb(89, 194, 243); 
+  padding-top: 8px;
+  padding-bottom: 8px;
+ padding-right: 9px;
+  padding-left:9px;
+  border-radius : 2px;  
+  cursor: pointer;
+  margin-right:8px;
+  transition: background-color 0.4s,opacity 0.1s, color 0.4s, padding 0.30s ;
+}
+ .join:hover{
+  background-color: rgb(89, 194, 243);
+ color:rgb(255, 255, 255);
+padding-top: 15px;
+padding-bottom: 15px;
+ padding-right: 15px;
+padding-left:15px;}
+.join:active { opacity:0.6; }
+
+.tw{background-color: rgb(64, 140, 233);
+  border:none;
+  color:white;
+  height: 35px;
+  width: 69px;
+  border-radius : 30px; 
+  font-weight: bold;
+  font-size:15px;  
+  cursor: pointer;
+  vertical-align: top;
+}
+.tw:hover { box-shadow: 3px 5px 9px rgba( 0, 0, 0, 0.25); }
+
+
+p  
+{font-family:arial;}
+
+.title
+  {
+  font-size: 20px;             
+  font-weight: bold;
+  font-style:italic;
+  width:200;
+  line-height: 23px;
+  margin-bottom: 10px;
+ 
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-bottom-color: rgb(14, 13, 13);
+}
+
+.ga
+{       
+ font-size:14px;
+ color: grey;
+ margin-top:0px;
+}
+
+.font_spe:hover
+ {
+ text-decoration: underline;
+ cursor:pointer;
+}
+
+.thumb1
+{
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  object-position:right;
+  border-style:solid;
+  border-width:2px;
+  border-color:red;
+
+}
+
+.thumb2
+{
+  width:300px;
+  height:300px;
+  object-fit:contain;
+  object-position:right;
+  border-style:solid;
+  border-width:2px;
+  border-color:red;
+
+}
