@@ -1,0 +1,25 @@
+
+compiler vs interpreted
+1.full      line by line compilation  https://www.youtube.com/watch?v=E3TDMVETp08
+2.exe file  source code sends to user  https://www.youtube.com/watch?v=I1f45REi3k4
+
+debugger https://www.youtube.com/watch?v=kRL6hjWOKWI
+
+programming vs scripting https://www.youtube.com/watch?v=g0Q-VWBX5Js
+
+js: node:
+
+js framework https://www.youtube.com/watch?v=Ka77djMkSwg
+
+javascript course
+main:supersimple dev
+tamil:logic first tamil
+class 1:https://www.youtube.com/watch?v=8dWL3wF_OMw
+class 2:https://www.youtube.com/watch?v=PkZNo7MFNFg
+
+
+Wl
+https://www.youtube.com/watch?v=A7fF6czIxEo  //
+https://www.youtube.com/watch?v=m55PTVUrlnA  //concepts neede for react
+https://www.youtube.com/watch?v=XMgNgEc94d8  //roadmap to react
+

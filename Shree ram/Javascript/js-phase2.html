@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quantity</title>
+     <!--       .....notes.....
+    innerHTL,queryselector directly control html from script
+    when we get value from DOM it is string format
+    use 'Number' fuction for conversion
+
+
+    onclick = click
+    onkeydown = key press
+    onscroll = scrolling
+    onmouseenter = hovering over
+    onmouseleave = stop hovering over
+    and many more
+
+    'classlist' this an element 0f obj,controls class atribute
+    like add() will add another class
+
+
+ -->
+    <style>
+        body{
+            background-color: rgb(243, 240, 240);
+        }
+
+        .subsbutton{
+            border: none;
+            background: black;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+
+        }
+        .is-subs{
+            background-color: rgb(219, 219, 219);
+            color: black;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <button >document</button>
+    <button onclick="console.log(`cart quatity= ${quatity}`);">show Quatity</button>
+    <button onclick="quatity++;
+    console.log(`cart quatity= ${quatity}`)">Add to cart</button>
+    <button onclick="quatity=0;
+    console.log(`cart was reset`)
+    console.log(`cart quatity= ${quatity}`)">Reset</button>
+   
+   
+   
+   
+    <button class="js-button">document</button>  
+    <button onclick="subscribe()" class="jssubs subsbutton">Subscribe</button>
+    <input placeholder="key guesser when pressed" 
+    onkeydown="console.log(event);">
+    <input placeholder="cost" class="js-cost" 
+    onkeydown=" handlekeyboard(event)">
+   
+    <button onclick="calculate();">calculate</button>
+    <p class="js-costdis"></p>
+
+    <button class="js-click">click</button>
+
+    <script>
+        let quatity=0;
+        document.title='JS phase-2';//'document ' let us edit html inside script
+        console. log( document. body) ;
+        console.log(typeof document.body);
+        console. log ( document. body. innerHTML );
+        if(false)//change into true to see what it does
+        {document.body.innerHTML='nothing';}
+      
+        document.querySelector('button').innerHTML='change';
+        document.querySelector('.js-button').innerHTML='changed 2';
+        const buttonelement = document.querySelector('.js-button').innerHTML;
+        console.log(buttonelement);
+
+        
+        function subscribe()
+        {
+            const jsbutton=document.querySelector('.jssubs');
+            if(jsbutton.innerText === 'Subscribe')
+            {jsbutton.innerHTML='Subscribed';
+            jsbutton.classList.add('is-subs');}
+            else
+            {jsbutton.innerHTML='Subscribe';
+            jsbutton.classList.remove('is-subs')}
+        }
+
+        function calculate()
+        {
+            const costvalue = document.querySelector('.js-cost');
+            let cost=Number(costvalue.value);
+
+            if(cost<40)
+              cost=cost+10;
+            
+            document.querySelector('.js-costdis').innerHTML=`$${cost}`;
+            
+        }
+
+        function handlekeyboard(event)
+        {
+            console.log(event.key);
+            if(event.key === 'Enter')calculate();
+        }
+
+        ///------Array-Loops-----------//
+        // arr in js is changable
+
+        const arr =[10, 20, 30];
+        console.log(arr);
+        console.log(arr[2]);
+        arr.splice(0,1);
+        console.log(arr);
+
+
+        const arr1=[1,2,3];
+        const arr2=arr1;// send address not values
+        arr2.push(4);
+        console.log(arr1);// same as arr2 cause arr2 get reference from
+        console.log(arr2);// cont- arr1 not values from arr1 to create new array
+       
+       // to duplicate an array
+       const arr3=[1,2,3];
+        const arr4=arr3.slice();
+        arr4.push(4);
+        console.log(arr3);
+        console.log(arr4);
+
+        //another way
+
+        const [val1 ,val2]=[1,2,3,4];
+
+
+//////////--------------function----------///////////
+// function are values
+// function can stored in variablr
+//we can pass fun() into another fun()
+//fun() can act as value
+
+const func1= function greet(){ //we can remove 'greet' nd becomes anonymous func
+    console.log('hello');
+}
+console.log(func1);
+console.log(typeof func1 );
+//greet();  // it will give error as greet is not defined
+func1();
+
+const obj4={
+    name:  4,
+    fun:  function greets(){
+        console.log('hi');
+    }
+}
+
+obj4.fun();
+;                                     //settimeout(value,time)
+setTimeout(function()  {            //this fun() act as value ,passed to another fun()
+    console.log('timeout');}, 3000);//3000ms = 3s
+
+    console.log('after timeout line');
+
+setInterval(function(){console.log('keep running')},3000);//this func keep on running with interval 3s
+//instead of looping we can
+['qwer','tyui','oplk'].forEach(function(val,i){
+    console.log(val,i);
+});
+
+
+//arrow fuction are same as regular function but with some shortcut
+const funcvari = function regular(para)
+{
+    return para + 1;
+}
+
+const arrowfunc = para => para +1;
+
+//without parameter
+//const arrowfunc= () => 2+2;
+console.log(funcvari(5));
+console.log(arrowfunc(5));  
+
+
+//professional method of onclick
+//assEventListener('event', function);
+const buttonclick = document.querySelector('.js-click');
+
+const events = () => 
+{ console.log('click');}
+
+buttonclick.addEventListener('click',events );
+
+document.querySelector('.js-click').addEventListener('click', () => 
+{ console.log('click2');} 
+ );//advan run multiple segment nd removable
+ 
+if(false) // change to true 
+ buttonclick.removeEventListener('click',events);
+
+
+</script>
+
+</body>
+</html>

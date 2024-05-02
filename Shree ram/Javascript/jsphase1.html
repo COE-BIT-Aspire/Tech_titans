@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--       .....notes.....
+1.covers all basic
+2.local storage store data permanently regardless of refreshing page
+and it only stores stings
+think localstorage will store data in server
+3.js call obj by reference means obj name will store only memory 
+location 
+ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <style>
+        button{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <button title="good" 
+    onclick="alert('hello world');">helo</button>
+    <button onclick="quatity++;
+    console.log(`cart quatity= ${quatity}`)">Add to cart</button>
+    <button onclick="alert(`cart quatity= ${quatity}`);">show Quatity with alert</button>
+    <button onclick="console.log(Math.random());">random no.</button><!--generate no. betw 0 nd 1-->
+
+
+    <script>
+        document.title='JS phase-1';//'document ' let us edit html inside script
+        console. log( document. body) ;
+        console.log(typeof document.body);
+        console. log ( document. body. innerHTML );
+        if(false)//change into true to see what it does
+        {document.body.innerHTML='nothing';}
+
+
+        let quatity=0;
+        const constant_value=33;
+        let variable_1=3;
+        console.log(variable_1);
+        let message='\'let\' can stores string'
+        console.log(message);
+        variable_1=10;// reassign
+        console.log(variable_1);
+        console.log(typeof message);
+        console.log(69<96);
+        console.log(typeof true);//if is 'true ' then o/p is string
+        console.log(5 == '5'); // this will convert both arguments into same type
+        console.log(5 ==='5'); // this remains default 
+        console.log('shree'.length);
+        console.log('js'.toUpperCase());//js will stores string in obj
+        if(true){
+            console.log('if...else');
+        }
+        function name(){
+            console.log('fuction called');
+        }
+        console.log('checkpoint');
+        name();
+
+
+        //object syntex
+        //slightly differ from programming
+        const product= {
+            name : 'ps4',
+            price: 50000
+        };
+        console.log(product);
+        console.log(product.name);
+        product.avail=true;
+        delete product.price; //delete
+        console.log(product);
+
+        //obl inside another obl
+        const dress={
+            type : 'shirt',
+            rating:{
+                star:4.5
+            },
+        fun1: function func1(){
+            console.log('func inside obj');
+        }
+        };
+        console.log(dress.rating.star);
+        dress.fun1();
+//JSON is obj syntex which can read by all prog lang , used for multi-platform
+        JSON.stringify(product); // here it convert js obj in json obj
+        JSON.parse(product); // convert vice-verse
+
+        //local storage
+        localStorage.setItem('name', 'value');
+
+
+    </script>
+</body>
+</html>

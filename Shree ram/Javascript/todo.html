@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Todos</title>
+   <!--  understand this program line by line execution
+    -->
+    <style>
+      .jstododiv{
+         display: grid;
+         grid-template-columns: 175px 118px 100px;
+      }
+    </style>
+</head>
+<body>
+   <p>todo list</p>
+   <input class="js-todoname"placeholder="Todo name">
+   <input type="date" class="jsdate">
+   <button onclick="addlist();">Add</button>
+   <div class="jstododiv"></div>
+
+   <script>
+      const todoarr=[{name:'dsa',date:'3829'}];
+      render();
+
+
+      function render()
+      {
+         let todoinhtml='';
+
+      for (let i=0; i < todoarr.length;i++) {
+         const todoobj=todoarr[i];
+        // const name=todoobj.name;
+        // const date=todoobj.date;  --or--
+        const {name,date}=todoobj; //deconstructng methd
+         const html=`<div>${todoobj.name}</div>
+         <div> ${date}</div>
+         <button onclick=
+         "todoarr.splice(${i},1); 
+         render();   "> delete</button>`;
+          todoinhtml += html;
+      }
+      document.querySelector('.jstododiv')
+      .innerHTML=todoinhtml;
+      }
+      
+
+
+      
+      function addlist()
+      {
+         const inbutton = document.querySelector('.js-todoname');
+         const todos=inbutton.value;
+         const datebutton =document.querySelector('.jsdate');
+         const dateval=datebutton.value;
+         todoarr.push({name:todos,
+         date:dateval});
+        
+         console.log(todoarr);
+         inbutton.value='';
+         render();
+      }
+
+   </script>
+   
+</body>
+</html>
