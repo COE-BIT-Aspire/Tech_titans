@@ -5,7 +5,7 @@ document.querySelector('.book-now-form').addEventListener('submit', function (ev
         }
 });
             
-function validateDates() {
+function validateDates() { 
     const checkInDate = new Date(document.getElementById('check-in').value);
     const checkOutDate = new Date(document.getElementById('check-out').value);
     const currentDate = new Date();
