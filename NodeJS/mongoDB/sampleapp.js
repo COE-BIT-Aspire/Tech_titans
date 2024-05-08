@@ -18,7 +18,7 @@ var jobSchema = new schema({
 
 var jobs = mongoose.model('jobSeeker', jobSchema);//here jobSeeker is the collection and .model method will create the jobSeeker xollection based on jobSchema
 
-mongoose.connect("mongodb://127.0.0.1:27017/task");
+mongoose.connect("mongodb://127.0.0.1:27017/aspire");
 
 var fresher1 = new jobs({
     Name: "Sujeeth",
