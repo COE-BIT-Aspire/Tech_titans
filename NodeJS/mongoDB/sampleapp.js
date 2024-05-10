@@ -33,5 +33,15 @@ var fresher1 = new jobs({
 
 fresher1.save();
 
+// jobs.find({}, (err, data) => {
+//     if (err) {
+//         console.log("the error is " + err);
+//     } else {
+//         console.log(data);
+//     }
+// });
+
+const result = await jobs.find({});
+result.map(record => console.log(record));
 
      
