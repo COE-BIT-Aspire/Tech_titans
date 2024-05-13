@@ -44,7 +44,6 @@ insert into studies values('somdutt', 'sabhari', 'pgdca', '4500');
 insert into  studies values ("ALTAF","COIT","DCA",7200),("JULIANA","BITS","MCA",22000),("KAMALA","PRAGATHI","DCP",5000),("MARY","SABHARI","PGDCA",4500),("NELSON","PRAGATHI","DAP",6200),("PATTRICK","PRAGATHI","DCAP",5200),("QADIR","APPLE","HDCP",14000),("RAMESH","SABHARI","PGDCA",4500),("REBECCA","BRILLIANT","DCP",11000),("REMITHA","BDPS","DCS",6000),("VIJAYA","BDPS","DCA",48000);
 
 
-
 select *from programmer;
 
 select *from software;
