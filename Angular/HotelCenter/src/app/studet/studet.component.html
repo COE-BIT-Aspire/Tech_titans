@@ -1,7 +1,22 @@
-<p>studet works!</p>
+<p class="text">studet works!</p>
+<p [class]="colored">See below results</p>
+
+<h1 *ngIf="false" else newBlock()>The detaila are</h1>
+<ng-template #newBlock>
+    <h1>Sorry can not retrieve data</h1>
+</ng-template>
+
+<!-- <div [ngSwitch]="changes">
+    <div *ngSwitchCase="'red'">You picked red color</div>
+    <div *ngSwitchCase="'blue'">You picked blue color</div>
+    <div *ngSwitchCase="'green'">You picked green color</div>
+</div> -->
+
+
 
 Student Name : {{studentName}}<br/>
 Student Mark : {{studentMark}}<br/>
 Date of Joing :{{DOJ}}<br/>
 
 <button (click)="displayMessage()">Click here </button>
+<h2 [style.color]="fontColor">Property binding</h2>
