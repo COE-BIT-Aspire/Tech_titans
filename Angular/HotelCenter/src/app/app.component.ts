@@ -4,12 +4,13 @@ import { StudetComponent } from './studet/studet.component';
 import { FormsModule } from '@angular/forms';
 import { ShopComponent } from './shop/shop.component';
 import { CommonModule } from '@angular/common';
+import { ProductComponent } from './product/product.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,StudetComponent,FormsModule,ShopComponent,CommonModule],
+  imports: [RouterOutlet,StudetComponent,FormsModule,ShopComponent,CommonModule,ProductComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
