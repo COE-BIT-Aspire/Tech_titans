@@ -8,4 +8,5 @@ export class Shop{
         this.shopId = shopId;
         this.location = location;   
     }
+
 }

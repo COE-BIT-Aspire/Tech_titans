@@ -1,13 +1,15 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 @Component({
   selector: 'app-studet',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './studet.component.html',
   styleUrl: './studet.component.css'
 })
+  
+  
 export class StudetComponent {
   studentName: String = 'Sujeeth';
   studentMark: Number = 100;

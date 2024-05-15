@@ -4,4 +4,13 @@
 <h5>Length = {{adminName.length}}</h5>
 <label for="shopeName">Name: </label>
 <input [(ngModel)]="shop1.shopName" id="shopeName">
-<p>{{shop1.shopId}}</p>
+<p>{{shop1.shopName}}</p>
+<br>
+<h2>ngFor</h2>
+<div>
+    <ul>
+        <li *ngFor="let item of availableItems">
+            {{item}}
+        </li>
+    </ul>
+</div>
