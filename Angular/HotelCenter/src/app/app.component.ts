@@ -5,12 +5,13 @@ import { FormsModule } from '@angular/forms';
 import { ShopComponent } from './shop/shop.component';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product/product.component';
+import { AcountHolderComponent } from './acount-holder/acount-holder.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,StudetComponent,FormsModule,ShopComponent,CommonModule,ProductComponent],
+  imports: [RouterOutlet,StudetComponent,FormsModule,ShopComponent,CommonModule,ProductComponent,AcountHolderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

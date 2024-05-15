@@ -1,0 +1,64 @@
+<p>acount-holder works!</p>
+
+<p>Select the Type of Bank: <select title="Category Selection" [(ngModel)]="requiredType" >
+    <option>
+        Savings
+    </option>
+    <option>
+        Current
+    </option>
+    <option>
+        Business
+    </option>
+</select>
+</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <td>
+                AccNumber
+            </td>
+            <td>
+                HolderName
+            </td>
+            <td>
+                AccType
+            </td>
+            <td>
+                Amount
+            </td>
+            <td>
+                contact
+            </td>
+            <td>
+                Status
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @for(account of accountholder;track account)
+        {
+        <tr>
+            @if (account.amount > requiredAmount && account.accType==requiredType){
+            <td>{{account.accNumber}}</td>
+            <td>{{account.holderName}}</td>
+            <td>{{account.accType}}</td>
+            <td>{{account.amount}}</td>
+            <td>{{account.contact}}</td>
+            <td [ngSwitch]="account.amount > 20000 ? account.amount > 60000 ? 'High Amount': 'Active' : 'Inactive'">
+                <ng-container *ngSwitchCase="'Active'">Active</ng-container>
+                <ng-container *ngSwitchCase="'Inactive'">Inactive</ng-container>
+                <ng-container *ngSwitchCase="'High Amount'">Loyal</ng-container>
+                <ng-container *ngSwitchDefault>Unknown</ng-container>
+            </td>
+            }
+            <ng-template #ElseBlock>
+                <p>
+                    No accounts with amount greater than required amount
+                </p>
+            </ng-template>
+        </tr>
+        }
+    </tbody>
+</table>
