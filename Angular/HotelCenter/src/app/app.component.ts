@@ -6,12 +6,12 @@ import { ShopComponent } from './shop/shop.component';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product/product.component';
 import { AcountHolderComponent } from './acount-holder/acount-holder.component';
-
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,StudetComponent,FormsModule,ShopComponent,CommonModule,ProductComponent,AcountHolderComponent],
+  imports: [RouterOutlet,StudetComponent,FormsModule,ShopComponent,CommonModule,ProductComponent,AcountHolderComponent,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

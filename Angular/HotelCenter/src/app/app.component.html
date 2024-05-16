@@ -6,4 +6,13 @@
 <!-- <app-shop></app-shop> -->
 <!-- <app-product></app-product> -->
 
-<app-acount-holder></app-acount-holder>
+<!-- <app-acount-holder></app-acount-holder> -->
+
+<a [routerLink]="'shop'">Shop</a>&nbsp;
+<a [routerLink]="'product'">List</a>&nbsp;
+<a [routerLink]="'studet'">StudentDetails</a>&nbsp;
+<a [routerLink]="'acount-holder'">HolderDetails</a>
+
+<div class="container" style="border:2px solid rgb(137, 171, 59); height:50%">
+    <router-outlet></router-outlet>
+</div>
