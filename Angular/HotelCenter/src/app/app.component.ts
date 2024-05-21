@@ -17,4 +17,5 @@ import { RouterLink } from '@angular/router';
 })
 export class AppComponent {
   title = 'Hotel Center';
+  DOJ: Date = new Date();
 }

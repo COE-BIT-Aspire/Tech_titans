@@ -23,7 +23,8 @@
       {
         "duplicate-id-aria": "off"
       }
-    ]
+    ],
+    "no-inline-styles": "off"
   },
   "browserslist": [
     "defaults",
