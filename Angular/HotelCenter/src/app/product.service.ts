@@ -8,9 +8,9 @@ export class ProductService {
 
   constructor(private client: HttpClient) { }
 
-    getAllProducts(){
-      return this.client.get('http://localhost:3000/products');
-    } 
+  getAllProducts(){
+    return this.client.get('http://localhost:3000/products');
+  } 
 }
 
 

@@ -20,4 +20,5 @@ export class ProductDetailsComponent {
         this.productData = data;
       });
   }
+
 }

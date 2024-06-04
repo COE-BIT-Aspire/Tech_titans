@@ -3,21 +3,26 @@
 <table border="1">
     <thead>
         <tr>
-            <td>Title</td>
-            <td>ID</td>
-            <td>Brand</td>
-            <td>Stock</td>
-            <td>Price</td>
+            <th>Title</th>
+            <th>ID</th>
+            <th>Brand</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>Picture</th>
         </tr>
     </thead>
     <tbody *ngFor="let product of productData">
+        <!-- @for(product of productData; track product){ -->
             <tr>
                 <td>{{product.title}}</td>
                 <td>{{product.id}}</td>
                 <td>{{product.brand}}</td>
                 <td>{{product.stock}}</td>
                 <td>{{product.price}}</td>
+                <td><img src="{{product.images}}"
+                        width="250" height="200"></td>
             </tr>
+        <!-- } -->
     </tbody>
     
 </table>
