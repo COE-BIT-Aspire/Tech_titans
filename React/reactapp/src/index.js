@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Greeting from './components/greeting';
+import Header from './components/header';
 
 // function Welcome() {
 //   return (
@@ -23,7 +24,8 @@ import Greeting from './components/greeting';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Greeting />
+    {/* <Greeting /> */}
+    <Header/>
   </React.StrictMode>
 );
 
