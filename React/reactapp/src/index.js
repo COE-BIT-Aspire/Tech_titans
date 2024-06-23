@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Greeting from './components/greeting';
 import Header from './components/header';
+import Color from './components/color';
+import Car from './components/car';
 
 // function Welcome() {
 //   return (
@@ -25,7 +27,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Greeting /> */}
-    <Header/>
+    {/* <Header/> */}
+    <Car/>
   </React.StrictMode>
 );
 
