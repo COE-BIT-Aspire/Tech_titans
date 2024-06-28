@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Greeting from './components/greeting';
-import Header from './components/header';
-import Color from './components/color';
-import Car from './components/car';
+import Greeting from './components/props/greeting';
+import Header from './components/props/header';
+import Car from './components/state/classCMP';
+import BookDetails from './components/state/books';
+import List from './components/state/list';
 
 // function Welcome() {
 //   return (
@@ -28,7 +29,10 @@ root.render(
   <React.StrictMode>
     {/* <Greeting /> */}
     {/* <Header/> */}
-    <Car/>
+    {/* <Color/>*/}
+    {/* <Car/>  */}
+    <List/>
+    <BookDetails/>
   </React.StrictMode>
 );
 

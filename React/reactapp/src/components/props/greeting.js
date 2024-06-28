@@ -5,14 +5,14 @@ function Greeting() {
     // const name = 'Sujeeth';
     // const userage = 25;
     const userinfo= {
-        name: 'Sujeeth',
-        age: 25
-  } 
-  const user = [
-    { name: 'Kavin', age: 30 },
-    { name: 'Ramesh', age: 50},
-    { name: 'Param', age: 40}
-  ];
+          name: 'Sujeeth',
+          age: 25
+    } 
+    const user = [
+      { name: 'Kavin', age: 30 },
+      { name: 'Ramesh', age: 50},
+      { name: 'Param', age: 40}
+    ];
     const ismorning = true;
     const wishinfo = { occ:"Birthday", age:22 };
     return (
