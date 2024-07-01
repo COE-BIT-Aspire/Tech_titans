@@ -9,6 +9,7 @@ import Car from './components/state/classCMP';
 import BookDetails from './components/state/books';
 import List from './components/state/list';
 import Timer from './components/state/timer';
+import Form from './components/forms/forms';
 
 // function Welcome() {
 //   return (
@@ -32,9 +33,10 @@ root.render(
     {/* <Header/> */}
     {/* <Color/>*/}
     {/* <Car/>  */}
-    <List/>
+    {/* <List/>
     <BookDetails />
-    <Timer />
+    <Timer /> */}
+    <Form/>
   </React.StrictMode>
 );
 
